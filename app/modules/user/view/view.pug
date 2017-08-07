@@ -1,0 +1,27 @@
+extends ../../../templates/master.pug
+
+block content
+
+    h3.title View Vehicles
+    
+            //-each vehicle in tblVehicle
+                li= `${vehicle.id} - ${vehicle.make} - ${vehicle.model} - ${vehicle.year}`
+    <table border = "3">
+            thead
+                tb
+                    th ID
+                    th Make
+                    th Model 
+                    th Year
+                    //-th Control
+                each vehicle in tblVehicle
+                    tr
+                        td= vehicle.id
+                        td= vehicle.make
+                        td= vehicle.model
+                        td= vehicle.year
+
+                    //-
+                        td 
+                            a(class = "button" , href = 'users/delete') Delete
+                            //-input(type="submit" value="Delete")

@@ -1,0 +1,27 @@
+//- This is how we extend a template using the 'extends' keyword
+extends ../../../templates/master.pug
+
+//- This is how we insert dynamic content to extended templates
+block content
+    form(method="POST" action="/users/new")
+        .field
+            .label Make
+            .control
+                input.input(type="text" placeholder="(ex. Toyota,Honda, ...)" name="make")
+        .field
+            .label Model
+            .control
+                input.input(type="text" placeholder="(ex. Vios,City, ...)" name="model")
+        .field
+            .label Year
+            .control
+                input.input(type="number" placeholder="(ex. 2000,2015, ...)" name="year")
+        .field
+            .label Plate Number
+            .control
+                input.input(type="text" placeholder="(ex. ABC123,NJK489, ...)" name="plateNo")
+        .field
+            .label Condition
+            .control
+                input.input(type="text" placeholder="(Brand New or Pre-Owned)" name="condi")
+        input(type="submit" value="Submit")

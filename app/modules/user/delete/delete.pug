@@ -1,0 +1,15 @@
+extends ../../../templates/master.pug
+
+block content
+    h3.title Delete a Record
+    <p>
+    form(method="POST" action="/users/delete")
+        .field
+            .label Delete
+            .control
+                input.input(type="number" placeholder="(ex. 1, 2, 3, ...)" name="id")
+        input(type="submit" value="Submit")
+        //-li= vehicle.id
+           //-select=deleteID
+                each vehicle in tblVehicle
+                    option= vehicle.id

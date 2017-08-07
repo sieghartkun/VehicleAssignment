@@ -1,0 +1,11 @@
+extends ../../../templates/master.pug
+
+block content 
+    h1.title View Specific Vehicle Record
+    form(method="POST" action="/users/viewSpecific2")
+        .field
+            .label Vehicle ID
+            .control
+                input.input(type="number" placeholder="(ex: 1, 2, 3, ...)" name="id")
+        br        
+        input(type="submit" value="Submit")

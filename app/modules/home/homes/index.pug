@@ -1,0 +1,18 @@
+//- This is how we extend a template using the 'extends' keyword
+extends ../../../templates/master.pug
+
+//- This is how we insert dynamic content to extended templates
+block content
+    h1.title Vehicle Record (Create.Read.Update.Delete)
+    
+    p Welcome User! 
+    hr
+    
+    <br>
+    
+    h2.title Options:
+    
+    a(class = "button" , href = 'users/new') Add
+    a(class = "button" , href = 'users/view') View
+    a(class = "button" , href = 'users/viewSpecific') View Specific(...includes Edit)
+    a(class = "button" , href = 'users/delete') Delete
